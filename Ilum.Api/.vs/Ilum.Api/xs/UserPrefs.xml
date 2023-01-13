@@ -1,3 +1,36 @@
 ﻿<Properties StartupConfiguration="{C0E6F716-CA30-44E0-8EFE-A367299FCE96}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Ilum.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Models/Task.cs" Line="18" Column="42" />
+      <File FileName="Models/Department.cs" Line="4" Column="37" />
+      <File FileName="Models/User.cs" Line="4" Column="31" />
+      <File FileName="Enums/TaskStatus.cs" Line="4" Column="5" />
+      <File FileName="Context/IIlumContext.cs" Line="7" Column="18" />
+      <File FileName="Context/IlumContext.cs" Line="27" Column="2" />
+      <File FileName="Program.cs" Line="36" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Ilum.Api" expanded="True">
+            <Node name="Ilum.Api" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Context" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Enums" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
 </Properties>

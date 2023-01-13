@@ -9,8 +9,8 @@ namespace Ilum.Api.Models
 		public string CurrentPassword { get; set; }
 		public string LastPassword { get; set; }
 
-		public int DepartmentId { get; set; }
-		public Department Department { get; set; }
+		//public int DepartmentId { get; set; }
+		//public Department Department { get; set; }
 	}
 }
 
