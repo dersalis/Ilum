@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ilum.Api.Migrations
 {
     [DbContext(typeof(IlumContext))]
-    [Migration("20230113210100_2200")]
-    partial class _2200
+    [Migration("20230119175520_191840")]
+    partial class _191840
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,8 +39,15 @@ namespace Ilum.Api.Migrations
                     b.Property<int?>("CreateUserId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
+
+                    b.Property<int>("LeaderId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
@@ -54,7 +61,43 @@ namespace Ilum.Api.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("LeaderId");
+
                     b.ToTable("Departments");
+                });
+
+            modelBuilder.Entity("Ilum.Api.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("ChangedById")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("CreatedById")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChangedById");
+
+                    b.HasIndex("CreatedById");
+
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("Ilum.Api.Models.Task", b =>
@@ -85,9 +128,6 @@ namespace Ilum.Api.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int>("LeaderId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
 
@@ -117,6 +157,8 @@ namespace Ilum.Api.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Tasks");
                 });
@@ -172,6 +214,62 @@ namespace Ilum.Api.Migrations
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Ilum.Api.Models.Worker", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Worker");
+                });
+
+            modelBuilder.Entity("Ilum.Api.Models.Department", b =>
+                {
+                    b.HasOne("Ilum.Api.Models.User", "Leader")
+                        .WithMany()
+                        .HasForeignKey("LeaderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Leader");
+                });
+
+            modelBuilder.Entity("Ilum.Api.Models.Product", b =>
+                {
+                    b.HasOne("Ilum.Api.Models.Worker", "ChangedBy")
+                        .WithMany()
+                        .HasForeignKey("ChangedById")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.HasOne("Ilum.Api.Models.Worker", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("ChangedBy");
+
+                    b.Navigation("CreatedBy");
+                });
+
+            modelBuilder.Entity("Ilum.Api.Models.Task", b =>
+                {
+                    b.HasOne("Ilum.Api.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Ilum.Api.Models.User", b =>

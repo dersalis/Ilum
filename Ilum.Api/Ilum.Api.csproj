@@ -23,11 +23,13 @@
     <None Remove="Enums\" />
     <None Remove="Context\" />
     <None Remove="Migrations\" />
+    <None Remove="Context\Configurations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="Enums\" />
     <Folder Include="Context\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Context\Configurations\" />
   </ItemGroup>
 </Project>

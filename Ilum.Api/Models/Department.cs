@@ -1,11 +1,13 @@
 ﻿using System;
-namespace Ilum.Api.Models
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace Ilum.Api.Models;
+
+public class Department : ModelBase
 {
-	public class Department : ModelBase
-	{
-		public string Name { get; set; }
-
-		public ICollection<User> Users { get; set; }
-	}
+	public string Name { get; set; }
+	public string Description { get; set; }
+	public int LeaderId { get; set; }
+	public User Leader { get; set; }
 }
-
