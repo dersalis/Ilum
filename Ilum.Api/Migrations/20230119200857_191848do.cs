@@ -5,7 +5,7 @@
 namespace Ilum.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class _191841 : Migration
+    public partial class _191848do : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

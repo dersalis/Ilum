@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Ilum.Api.Context.Configurations;
 
-public sealed class DepartmenConfiguration : IEntityTypeConfiguration<Department>
+public sealed class DepartmentConfiguration : IEntityTypeConfiguration<Department>
 {
     public void Configure(EntityTypeBuilder<Department> builder)
     {

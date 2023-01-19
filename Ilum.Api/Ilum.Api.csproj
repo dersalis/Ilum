@@ -24,6 +24,7 @@
     <None Remove="Context\" />
     <None Remove="Migrations\" />
     <None Remove="Context\Configurations\" />
+    <None Remove="Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -31,5 +32,6 @@
     <Folder Include="Context\" />
     <Folder Include="Migrations\" />
     <Folder Include="Context\Configurations\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>

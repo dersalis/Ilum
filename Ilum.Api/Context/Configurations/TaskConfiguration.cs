@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Ilum.Api.Context.Configurations;
 
-public sealed class TaskConfiguration : IEntityTypeConfiguration<Models.Task>
+public class TaskConfiguration : IEntityTypeConfiguration<Models.Task>
 {
     public void Configure(EntityTypeBuilder<Models.Task> builder)
     {
@@ -37,13 +37,13 @@ public sealed class TaskConfiguration : IEntityTypeConfiguration<Models.Task>
 
         builder.Property(p => p.Progress);
 
-        builder.Property(p => p.Status)
-            .HasDefaultValue(0)
-            .IsRequired();
+        //builder.Property(p => p.Status)
+        //    .HasDefaultValue(0)
+        //    .IsRequired();
 
-        builder.Property(p => p.Priority)
-            .HasDefaultValue(0)
-            .IsRequired();
+        //builder.Property(p => p.Priority)
+        //    .HasDefaultValue(0)
+        //    .IsRequired();
 
         builder.HasOne(p => p.ResponsibleUser)
             .WithMany()

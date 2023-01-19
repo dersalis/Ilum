@@ -6,52 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Ilum.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class _191838 : Migration
+    public partial class _191844 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Worker",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Worker", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Products",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedById = table.Column<int>(type: "int", nullable: true),
-                    ChangedById = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Products", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Products_Worker_ChangedById",
-                        column: x => x.ChangedById,
-                        principalTable: "Worker",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                    table.ForeignKey(
-                        name: "FK_Products_Worker_CreatedById",
-                        column: x => x.CreatedById,
-                        principalTable: "Worker",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Departments",
                 columns: table => new
@@ -61,15 +20,17 @@ namespace Ilum.Api.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LeaderId = table.Column<int>(type: "int", nullable: false),
+                    LeaderId1 = table.Column<int>(type: "int", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreateUserId = table.Column<int>(type: "int", nullable: true),
+                    CreateByUserId = table.Column<int>(type: "int", nullable: true),
                     ModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ModifiedUserId = table.Column<int>(type: "int", nullable: true)
+                    ModifiedByUserId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Departments", x => x.Id);
+                    table.PrimaryKey("PK_Departments", x => x.Id)
+                        .Annotation("SqlServer:Clustered", true);
                 });
 
             migrationBuilder.CreateTable(
@@ -81,22 +42,34 @@ namespace Ilum.Api.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Login = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CurrentPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DepartmentId = table.Column<int>(type: "int", nullable: true),
+                    DepartmentId = table.Column<int>(type: "int", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreateUserId = table.Column<int>(type: "int", nullable: true),
+                    CreateByUserId = table.Column<int>(type: "int", nullable: true),
                     ModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ModifiedUserId = table.Column<int>(type: "int", nullable: true)
+                    ModifiedByUserId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.Id)
+                        .Annotation("SqlServer:Clustered", true);
                     table.ForeignKey(
                         name: "FK_Users_Departments_DepartmentId",
                         column: x => x.DepartmentId,
                         principalTable: "Departments",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Users_Users_CreateByUserId",
+                        column: x => x.CreateByUserId,
+                        principalTable: "Users",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Users_Users_ModifiedByUserId",
+                        column: x => x.ModifiedByUserId,
+                        principalTable: "Users",
                         principalColumn: "Id");
                 });
 
@@ -112,76 +85,123 @@ namespace Ilum.Api.Migrations
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     Priority = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
+                    ResponsibleUserId = table.Column<int>(type: "int", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     PlannedFinishDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FinishDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    CreateUserId = table.Column<int>(type: "int", nullable: true),
+                    CreateByUserId = table.Column<int>(type: "int", nullable: true),
                     ModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    ModifiedUserId = table.Column<int>(type: "int", nullable: true)
+                    ModifiedByUserId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tasks", x => x.Id);
+                    table.PrimaryKey("PK_Tasks", x => x.Id)
+                        .Annotation("SqlServer:Clustered", true);
                     table.ForeignKey(
-                        name: "FK_Tasks_Users_UserId",
-                        column: x => x.UserId,
+                        name: "FK_Tasks_Users_CreateByUserId",
+                        column: x => x.CreateByUserId,
+                        principalTable: "Users",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Tasks_Users_ModifiedByUserId",
+                        column: x => x.ModifiedByUserId,
+                        principalTable: "Users",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Tasks_Users_ResponsibleUserId",
+                        column: x => x.ResponsibleUserId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Departments_LeaderId",
+                name: "IX_Departments_CreateByUserId",
                 table: "Departments",
-                column: "LeaderId");
-
-            //migrationBuilder.CreateIndex(
-            //    name: "IX_Products_ChangedById",
-            //    table: "Products",
-            //    column: "ChangedById");
-
-            //migrationBuilder.CreateIndex(
-            //    name: "IX_Products_CreatedById",
-            //    table: "Products",
-            //    column: "CreatedById");
+                column: "CreateByUserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tasks_UserId",
+                name: "IX_Departments_LeaderId1",
+                table: "Departments",
+                column: "LeaderId1");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Departments_ModifiedByUserId",
+                table: "Departments",
+                column: "ModifiedByUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tasks_CreateByUserId",
                 table: "Tasks",
-                column: "UserId");
+                column: "CreateByUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tasks_ModifiedByUserId",
+                table: "Tasks",
+                column: "ModifiedByUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tasks_ResponsibleUserId",
+                table: "Tasks",
+                column: "ResponsibleUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_CreateByUserId",
+                table: "Users",
+                column: "CreateByUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_DepartmentId",
                 table: "Users",
                 column: "DepartmentId");
 
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_ModifiedByUserId",
+                table: "Users",
+                column: "ModifiedByUserId");
+
             migrationBuilder.AddForeignKey(
-                name: "FK_Departments_Users_LeaderId",
+                name: "FK_Departments_Users_CreateByUserId",
                 table: "Departments",
-                column: "LeaderId",
+                column: "CreateByUserId",
+                principalTable: "Users",
+                principalColumn: "Id");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Departments_Users_LeaderId1",
+                table: "Departments",
+                column: "LeaderId1",
                 principalTable: "Users",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_Departments_Users_ModifiedByUserId",
+                table: "Departments",
+                column: "ModifiedByUserId",
+                principalTable: "Users",
+                principalColumn: "Id");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Departments_Users_LeaderId",
+                name: "FK_Departments_Users_CreateByUserId",
+                table: "Departments");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Departments_Users_LeaderId1",
+                table: "Departments");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Departments_Users_ModifiedByUserId",
                 table: "Departments");
 
             migrationBuilder.DropTable(
-                name: "Products");
-
-            migrationBuilder.DropTable(
                 name: "Tasks");
-
-            migrationBuilder.DropTable(
-                name: "Worker");
 
             migrationBuilder.DropTable(
                 name: "Users");
