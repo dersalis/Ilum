@@ -17,9 +17,9 @@ public class GetAllUsersQueryHandler : BaseHandler, IRequestHandler<GetAllUsersQ
 
     public async Task<IEnumerable<GetUserDto>> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
     {
-        IEnumerable<User> users = await _ilumContext.Users.ToListAsync();
+        IEnumerable<User> users = await _ilumContext.Users.ToListAsync(cancellationToken);
 
-        if (users == null) return null;
+        if (users is null) return null;
 
         return users.Select(u => new GetUserDto()
         {
