@@ -1,19 +1,20 @@
 ﻿<Properties StartupConfiguration="{C0E6F716-CA30-44E0-8EFE-A367299FCE96}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Ilum.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Ilum.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Context/IlumContext.cs">
     <Files>
-      <File FileName="Models/Task.cs" Line="18" Column="42" />
-      <File FileName="Models/Department.cs" Line="4" Column="37" />
-      <File FileName="Models/User.cs" Line="4" Column="31" />
-      <File FileName="Enums/TaskStatus.cs" Line="4" Column="5" />
-      <File FileName="Context/IIlumContext.cs" Line="7" Column="18" />
-      <File FileName="Context/IlumContext.cs" Line="27" Column="2" />
-      <File FileName="Program.cs" Line="36" Column="1" />
+      <File FileName="Models/User.cs" Line="16" Column="2" />
+      <File FileName="Models/Department.cs" Line="13" Column="2" />
+      <File FileName="Models/ModelBase.cs" Line="4" Column="14" />
+      <File FileName="Context/Configurations/UserConfiguration.cs" Line="36" Column="30" />
+      <File FileName="Context/Configurations/TaskConfiguration.cs" Line="57" Column="45" />
+      <File FileName="Context/IlumContext.cs" Line="28" Column="11" NotebookId="1" />
+      <File FileName="Context/IIlumContext.cs" Line="11" Column="45" NotebookId="1" />
+      <File FileName="Context/Configurations/DepartmenConfiguration.cs" Line="27" Column="24" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,11 +22,14 @@
           <Node name="Ilum.Api" expanded="True">
             <Node name="Ilum.Api" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Context" expanded="True" />
+              <Node name="Context" expanded="True">
+                <Node name="Configurations" expanded="True" />
+              </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Enums" expanded="True" />
+              <Node name="Extensions" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

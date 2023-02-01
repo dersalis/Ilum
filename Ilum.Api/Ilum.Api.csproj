@@ -25,6 +25,10 @@
     <None Remove="Migrations\" />
     <None Remove="Context\Configurations\" />
     <None Remove="Extensions\" />
+    <None Remove="Features\" />
+    <None Remove="Features\Queries\" />
+    <None Remove="Shared\" />
+    <None Remove="Dtos\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -33,5 +37,9 @@
     <Folder Include="Migrations\" />
     <Folder Include="Context\Configurations\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\Queries\" />
+    <Folder Include="Shared\" />
+    <Folder Include="Dtos\" />
   </ItemGroup>
 </Project>
