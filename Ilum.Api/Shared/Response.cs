@@ -5,6 +5,7 @@ namespace Ilum.Api.Shared
 	{
 		public bool IsSuccess { get; set; }
 		public string Message { get; set; }
+		public int Id { get; set; } = -1;
 
 		public static Response Success(string message = "") => new()
 		{
@@ -12,7 +13,13 @@ namespace Ilum.Api.Shared
 			Message = message
 		};
 
-		public static Response Failure(string message) => new()
+        public static Response Success(int id) => new()
+        {
+            IsSuccess = true,
+			Id = id
+        };
+
+        public static Response Failure(string message) => new()
 		{
 			IsSuccess = false,
 			Message = message

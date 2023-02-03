@@ -1,7 +1,6 @@
-﻿using System;
-namespace Ilum.Api.Models
+﻿namespace Ilum.Api.Models
 {
-	public class User : ModelBase
+    public class User : ModelBase
 	{
 		public string FirstName { get; set; }
 		public string LastName { get; set; }

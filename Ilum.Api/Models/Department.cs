@@ -1,8 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace Ilum.Api.Models;
+﻿namespace Ilum.Api.Models;
 
 public class Department : ModelBase
 {

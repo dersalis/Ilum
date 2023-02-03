@@ -29,6 +29,7 @@
     <None Remove="Features\Queries\" />
     <None Remove="Shared\" />
     <None Remove="Dtos\" />
+    <None Remove="Features\Commands\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -41,5 +42,6 @@
     <Folder Include="Features\Queries\" />
     <Folder Include="Shared\" />
     <Folder Include="Dtos\" />
+    <Folder Include="Features\Commands\" />
   </ItemGroup>
 </Project>

@@ -1,40 +1,46 @@
 ﻿<Properties StartupConfiguration="{C0E6F716-CA30-44E0-8EFE-A367299FCE96}|Default">
-  <MonoDevelop.Ide.ItemProperties.Ilum.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Context/IlumContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Features/Commands/CreateUserCommand.cs">
     <Files>
-      <File FileName="Models/User.cs" Line="16" Column="2" />
+      <File FileName="Models/User.cs" Line="6" Column="3" />
       <File FileName="Models/Department.cs" Line="13" Column="2" />
-      <File FileName="Models/ModelBase.cs" Line="4" Column="14" />
-      <File FileName="Context/Configurations/UserConfiguration.cs" Line="36" Column="30" />
-      <File FileName="Context/Configurations/TaskConfiguration.cs" Line="57" Column="45" />
-      <File FileName="Context/IlumContext.cs" Line="28" Column="11" NotebookId="1" />
-      <File FileName="Context/IIlumContext.cs" Line="11" Column="45" NotebookId="1" />
-      <File FileName="Context/Configurations/DepartmenConfiguration.cs" Line="27" Column="24" NotebookId="1" />
+      <File FileName="Context/Configurations/UserConfiguration.cs" />
+      <File FileName="Context/Configurations/TaskConfiguration.cs" Line="61" Column="1" />
+      <File FileName="Dtos/GetTaskDto.cs" Line="12" Column="40" />
+      <File FileName="Dtos/GetDepartmentDto.cs" Line="16" Column="1" />
+      <File FileName="Context/IlumContext.cs" Line="40" Column="2" NotebookId="1" />
+      <File FileName="Context/IIlumContext.cs" NotebookId="1" />
+      <File FileName="Features/Queries/GetAllDepartmentsQuery.cs" Line="20" Column="113" NotebookId="1" />
+      <File FileName="Features/Queries/GetAllTaskQuery.cs" Line="8" Column="37" NotebookId="1" />
+      <File FileName="Features/Commands/CreateUserCommand.cs" Line="19" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Ilum.Api" expanded="True">
             <Node name="Ilum.Api" expanded="True">
-              <Node name="Dependencies" expanded="True" />
               <Node name="Context" expanded="True">
                 <Node name="Configurations" expanded="True" />
               </Node>
               <Node name="Controllers" expanded="True" />
-              <Node name="Enums" expanded="True" />
-              <Node name="Extensions" expanded="True" />
-              <Node name="Migrations" expanded="True" />
+              <Node name="Dtos" expanded="True" />
+              <Node name="Features" expanded="True">
+                <Node name="Commands" expanded="True">
+                  <Node name="CreateUserCommand.cs" selected="True" />
+                </Node>
+              </Node>
               <Node name="Models" expanded="True" />
+              <Node name="Shared" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Ilum.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
