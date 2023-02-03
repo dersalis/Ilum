@@ -13,7 +13,7 @@ namespace Ilum.Api.Shared
 			Message = message
 		};
 
-        public static Response Success(int id) => new()
+        public static Response Success(int id, string message = "") => new()
         {
             IsSuccess = true,
 			Id = id

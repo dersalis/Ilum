@@ -1,9 +1,4 @@
-﻿using System;
-using Ilum.Api.Enums;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-
-namespace Ilum.Api.Models;
+﻿namespace Ilum.Api.Models;
 
 public class Task : ModelBase
 {
@@ -15,7 +10,7 @@ public class Task : ModelBase
 	public Enums.TaskPriority Priority { get; set; }
 	public User ResponsibleUser { get; set; }
     public int ResponsibleUserId { get; set; }
-    public DateTime StartDate { get; set; }
-	public DateTime PlannedFinishDate { get; set; }
-	public DateTime FinishDate { get; set; }
+    public DateTime? StartDate { get; set; }
+	public DateTime? PlannedFinishDate { get; set; }
+	public DateTime? FinishDate { get; set; }
 }

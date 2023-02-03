@@ -18,6 +18,7 @@ public class CreateUserCommand : IRequest<Response>
     public int DepartmentId { get; set; }
 }
 
+
 public class CreateUserCommandHandler : BaseHandler, IRequestHandler<CreateUserCommand, Response>
 {
     public CreateUserCommandHandler(IIlumContext ilumContext) : base(ilumContext)
@@ -29,7 +30,7 @@ public class CreateUserCommandHandler : BaseHandler, IRequestHandler<CreateUserC
         if (user is null) return Response.Failure("Brak użytkownika.");
 
         User userByLogin = await _ilumContext.Users.Where(u => u.Login == request.Login).FirstOrDefaultAsync();
-        if (userByLogin is null) return Response.Failure("Użytkownik o podanym loginie już istnieje.");
+        if (userByLogin is not null) return Response.Failure("Użytkownik o podanym loginie już istnieje.");
 
         if (!request.NewPassword.Equals(request.RepeatedPassword)) return Response.Failure("Podane hasła są różne.");
 
