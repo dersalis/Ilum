@@ -29,13 +29,13 @@ public class CreateUserCommandHandler : BaseHandler, IRequestHandler<CreateUserC
         User user = await _ilumContext.Users.Where(u => u.Id == 1).FirstOrDefaultAsync();
         if (user is null) return Response.Failure("Brak użytkownika.");
 
-        User userByLogin = await _ilumContext.Users.Where(u => u.Login == request.Login).FirstOrDefaultAsync();
-        if (userByLogin is not null) return Response.Failure("Użytkownik o podanym loginie już istnieje.");
+        User userByLogin = await _ilumContext.Users.Where(u => u.Login == request.Login || u.Email == request.Email).FirstOrDefaultAsync();
+        if (userByLogin is not null) return Response.Failure("Użytkownik o podanym loginie lub e-mail już istnieje.");
 
         if (!request.NewPassword.Equals(request.RepeatedPassword)) return Response.Failure("Podane hasła są różne.");
 
         Department department = await _ilumContext.Departments.Where(d => d.IsActive == true && d.Id == request.DepartmentId).FirstOrDefaultAsync();
-        if (department is null) return Response.Failure("Brak działu o danum Id.");
+        if (department is null) return Response.Failure($"Brak działu o Id = {request.DepartmentId}.");
 
         User newUser = new()
         {
