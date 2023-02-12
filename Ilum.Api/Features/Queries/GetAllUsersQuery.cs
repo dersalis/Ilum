@@ -1,5 +1,4 @@
-﻿using System;
-using Ilum.Api.Context;
+﻿using Ilum.Api.Context;
 using Ilum.Api.Dtos;
 using Ilum.Api.Models;
 using MediatR;

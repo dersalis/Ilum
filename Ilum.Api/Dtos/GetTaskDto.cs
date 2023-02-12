@@ -14,8 +14,8 @@ public class GetTaskDto
     public Enums.TaskPriority Priority { get; set; }
     public string ResponsibleUserName { get; set; }
     public int ResponsibleUserId { get; set; }
-    public DateTime StartDate { get; set; }
-    public DateTime PlannedFinishDate { get; set; }
-    public DateTime FinishDate { get; set; }
+    public DateTime? StartDate { get; set; }
+    public DateTime? PlannedFinishDate { get; set; }
+    public DateTime? FinishDate { get; set; }
 }
 
