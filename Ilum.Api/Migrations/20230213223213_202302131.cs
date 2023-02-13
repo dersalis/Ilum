@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Ilum.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class _191844 : Migration
+    public partial class _202302131 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,10 +17,8 @@ namespace Ilum.Api.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LeaderId = table.Column<int>(type: "int", nullable: false),
-                    LeaderId1 = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CreateByUserId = table.Column<int>(type: "int", nullable: true),
@@ -39,13 +37,13 @@ namespace Ilum.Api.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Login = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CurrentPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastPassword = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DepartmentId = table.Column<int>(type: "int", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Login = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    CurrentPassword = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: false),
+                    LastPassword = table.Column<string>(type: "nvarchar(64)", maxLength: 64, nullable: false),
+                    DepartmentId = table.Column<int>(type: "int", nullable: true),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CreateByUserId = table.Column<int>(type: "int", nullable: true),
@@ -79,16 +77,16 @@ namespace Ilum.Api.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Progress = table.Column<int>(type: "int", nullable: false),
                     Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     Priority = table.Column<int>(type: "int", nullable: false),
                     ResponsibleUserId = table.Column<int>(type: "int", nullable: false),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PlannedFinishDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    FinishDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    PlannedFinishDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    FinishDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CreateByUserId = table.Column<int>(type: "int", nullable: true),
@@ -113,19 +111,13 @@ namespace Ilum.Api.Migrations
                         name: "FK_Tasks_Users_ResponsibleUserId",
                         column: x => x.ResponsibleUserId,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Departments_CreateByUserId",
                 table: "Departments",
                 column: "CreateByUserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Departments_LeaderId1",
-                table: "Departments",
-                column: "LeaderId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Departments_ModifiedByUserId",
@@ -170,14 +162,6 @@ namespace Ilum.Api.Migrations
                 principalColumn: "Id");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Departments_Users_LeaderId1",
-                table: "Departments",
-                column: "LeaderId1",
-                principalTable: "Users",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
                 name: "FK_Departments_Users_ModifiedByUserId",
                 table: "Departments",
                 column: "ModifiedByUserId",
@@ -190,10 +174,6 @@ namespace Ilum.Api.Migrations
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_Departments_Users_CreateByUserId",
-                table: "Departments");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_Departments_Users_LeaderId1",
                 table: "Departments");
 
             migrationBuilder.DropForeignKey(

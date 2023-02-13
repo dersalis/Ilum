@@ -10,7 +10,7 @@ namespace Ilum.Api.Dtos
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Login { get; set; }
-        public int DepartmentId { get; set; }
+        public int? DepartmentId { get; set; }
         public string DepartmentName { get; set; }
     }
 }

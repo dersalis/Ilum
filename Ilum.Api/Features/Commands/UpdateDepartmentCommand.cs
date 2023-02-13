@@ -12,7 +12,7 @@ public class UpdateDepartmentCommand : IRequest<Response>
     public int Id { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
-    public int LeaderId { get; set; }
+    //public int LeaderId { get; set; }
 }
 
 
@@ -32,12 +32,12 @@ public class UpdateDepartmentCommandHandler : BaseHandler, IRequestHandler<Updat
         Department departmentToUpdate = await _ilumContext.Departments.Where(d => d.Id == request.Id).FirstOrDefaultAsync();
         if (departmentToUpdate is null) return Response.Failure($"Biuro o Id = {request.Id} nie istnieje.");
 
-        User leader = await _ilumContext.Users.Where(u => u.Id == request.LeaderId).FirstOrDefaultAsync();
-        if (user is null) return Response.Failure($"Brak użytkownika o Id = {request.LeaderId}.");
+        //User leader = await _ilumContext.Users.Where(u => u.Id == request.LeaderId).FirstOrDefaultAsync();
+        //if (user is null) return Response.Failure($"Brak użytkownika o Id = {request.LeaderId}.");
 
         departmentToUpdate.Name = request.Name;
         departmentToUpdate.Description = request.Description;
-        departmentToUpdate.Leader = leader;
+        //departmentToUpdate.Leader = leader;
         departmentToUpdate.ModifiedByUser = user;
         departmentToUpdate.ModifiedDate = DateTime.Now;
 

@@ -44,9 +44,6 @@ namespace Ilum.Api.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int>("LeaderId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("ModifiedByUserId")
                         .HasColumnType("int");
 
@@ -63,8 +60,6 @@ namespace Ilum.Api.Migrations
                     SqlServerKeyBuilderExtensions.IsClustered(b.HasKey("Id"));
 
                     b.HasIndex("CreateByUserId");
-
-                    b.HasIndex("LeaderId");
 
                     b.HasIndex("ModifiedByUserId");
 
@@ -94,7 +89,7 @@ namespace Ilum.Api.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<DateTime>("FinishDate")
+                    b.Property<DateTime?>("FinishDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsActive")
@@ -111,7 +106,7 @@ namespace Ilum.Api.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<DateTime>("PlannedFinishDate")
+                    b.Property<DateTime?>("PlannedFinishDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("Priority")
@@ -123,7 +118,7 @@ namespace Ilum.Api.Migrations
                     b.Property<int>("ResponsibleUserId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("StartDate")
+                    b.Property<DateTime?>("StartDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("Status")
@@ -161,7 +156,7 @@ namespace Ilum.Api.Migrations
                         .HasMaxLength(64)
                         .HasColumnType("nvarchar(64)");
 
-                    b.Property<int>("DepartmentId")
+                    b.Property<int?>("DepartmentId")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
@@ -218,20 +213,12 @@ namespace Ilum.Api.Migrations
                         .HasForeignKey("CreateByUserId")
                         .OnDelete(DeleteBehavior.NoAction);
 
-                    b.HasOne("Ilum.Api.Models.User", "Leader")
-                        .WithMany()
-                        .HasForeignKey("LeaderId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
                     b.HasOne("Ilum.Api.Models.User", "ModifiedByUser")
                         .WithMany()
                         .HasForeignKey("ModifiedByUserId")
                         .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("CreateByUser");
-
-                    b.Navigation("Leader");
 
                     b.Navigation("ModifiedByUser");
                 });
@@ -271,8 +258,7 @@ namespace Ilum.Api.Migrations
                     b.HasOne("Ilum.Api.Models.Department", "Department")
                         .WithMany()
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("Ilum.Api.Models.User", "ModifiedByUser")
                         .WithMany()

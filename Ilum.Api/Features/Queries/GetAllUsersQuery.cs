@@ -27,8 +27,8 @@ public class GetAllUsersQueryHandler : BaseHandler, IRequestHandler<GetAllUsersQ
             LastName = u.LastName,
             Email = u.Email,
             Login = u.Login,
-            DepartmentId = u.Department.Id,
-            DepartmentName = u.Department.Name,
+            DepartmentId = u.Department?.Id,
+            DepartmentName = u.Department?.Name,
         });
     }
 }

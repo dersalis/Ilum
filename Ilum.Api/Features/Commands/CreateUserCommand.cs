@@ -44,6 +44,7 @@ public class CreateUserCommandHandler : BaseHandler, IRequestHandler<CreateUserC
             Email = request.Email,
             Login = request.Login,
             CurrentPassword = request.NewPassword,
+            LastPassword = request.NewPassword,
             Department = department,
             IsActive = true,
             CreateDate = DateTime.Now,

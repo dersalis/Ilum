@@ -26,8 +26,8 @@ namespace Ilum.Api.Features.Queries
                 Id = d.Id,
                 Name = d.Name,
                 Description = d.Description,
-                LeaderId = d.Leader.Id,
-                LeaderName = $"{d.Leader.FirstName} {d.Leader.LastName}",
+                //LeaderId = d.Leader.Id,
+                //LeaderName = $"{d.Leader.FirstName} {d.Leader.LastName}",
             });
         }
     }

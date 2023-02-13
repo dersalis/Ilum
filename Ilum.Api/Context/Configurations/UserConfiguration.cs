@@ -18,16 +18,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(p => p.IsActive)
             .IsRequired();
 
-        builder.HasOne(p => p.CreateByUser)
-            .WithMany()
-            .HasForeignKey(p => p.CreateByUserId)
-            .OnDelete(DeleteBehavior.NoAction);
-
-        builder.HasOne(p => p.ModifiedByUser)
-            .WithMany()
-            .HasForeignKey(p => p.ModifiedByUserId)
-            .OnDelete(DeleteBehavior.NoAction);
-
         builder.Property(p => p.FirstName)
             .HasMaxLength(50)
             .IsRequired();
@@ -56,6 +46,15 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .HasForeignKey(p => p.DepartmentId)
             .OnDelete(DeleteBehavior.NoAction);
 
+        builder.HasOne(p => p.CreateByUser)
+            .WithMany()
+            .HasForeignKey(p => p.CreateByUserId)
+            .OnDelete(DeleteBehavior.NoAction);
+
+        builder.HasOne(p => p.ModifiedByUser)
+            .WithMany()
+            .HasForeignKey(p => p.ModifiedByUserId)
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }
 

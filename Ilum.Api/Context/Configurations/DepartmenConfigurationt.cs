@@ -35,11 +35,10 @@ public sealed class DepartmentConfiguration : IEntityTypeConfiguration<Departmen
         builder.Property(p => p.Description)
             .HasMaxLength(200);
 
-        builder.HasOne(p => p.Leader)
-            .WithMany()
-            .HasForeignKey(p => p.LeaderId)
-            .OnDelete(DeleteBehavior.NoAction)
-            .IsRequired();
+        //builder.HasOne(p => p.Leader)
+        //    .WithMany()
+        //    .HasForeignKey(p => p.LeaderId)
+        //    .OnDelete(DeleteBehavior.NoAction);
     }
 }
 

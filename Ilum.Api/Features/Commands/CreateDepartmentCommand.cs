@@ -10,7 +10,7 @@ public class CreateDepartmentCommand : IRequest<Response>
 {
     public string Name { get; set; }
     public string Description { get; set; }
-    public int LeaderId { get; set; }
+    //public int LeaderId { get; set; }
 }
 
 
@@ -27,14 +27,14 @@ public class CreateDepartmentCommandHandler : BaseHandler, IRequestHandler<Creat
         Department department = await _ilumContext.Departments.Where(d => d.Name == request.Name).FirstOrDefaultAsync();
         if (department is not null) return Response.Failure("Biuro o danej nazwie już istnieje");
 
-        User leader = await _ilumContext.Users.Where(u => u.Id == request.LeaderId).FirstOrDefaultAsync();
-        if (user is null) return Response.Failure($"Brak użytkownika o Id = {request.LeaderId}.");
+        //User leader = await _ilumContext.Users.Where(u => u.Id == request.LeaderId).FirstOrDefaultAsync();
+        //if (user is null) return Response.Failure($"Brak użytkownika o Id = {request.LeaderId}.");
 
         Department newDepartment = new()
         {
             Name = request.Name,
             Description = request.Description,
-            Leader = leader,
+            //Leader = leader,
         };
 
         _ilumContext.Departments.Add(newDepartment);
