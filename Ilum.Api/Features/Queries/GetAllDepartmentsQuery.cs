@@ -21,14 +21,16 @@ namespace Ilum.Api.Features.Queries
 
             if (departments is null) return null;
 
-            return departments.Select(d => new GetDepartmentDto()
-            {
-                Id = d.Id,
-                Name = d.Name,
-                Description = d.Description,
-                //LeaderId = d.Leader.Id,
-                //LeaderName = $"{d.Leader.FirstName} {d.Leader.LastName}",
-            });
+            //return departments.Select(d => new GetDepartmentDto()
+            //{
+            //    Id = d.Id,
+            //    Name = d.Name,
+            //    Description = d.Description,
+            //    //LeaderId = d.Leader.Id,
+            //    //LeaderName = $"{d.Leader.FirstName} {d.Leader.LastName}",
+            //});
+
+            return _mapper.Map<IEnumerable<GetDepartmentDto>>(departments);
         }
     }
 }

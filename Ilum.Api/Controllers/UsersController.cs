@@ -19,7 +19,7 @@ public class UsersController : BaseController
 	}
 
 
-	[HttpGet("{id: int}")]
+	[HttpGet("{id}")]
 	public async Task<IActionResult> GetById(int id)
 	{
 		return Ok(await _mediator.Send(new GetUserByIdQuery() { Id = id }));
@@ -33,7 +33,7 @@ public class UsersController : BaseController
 	}
 
 
-	[HttpPut("{id: int}")]
+	[HttpPut("{i}")]
 	public async Task<IActionResult> Update(int id, [FromBody] UpdateUserCommand command)
 	{
 		if (id != command.Id) return BadRequest();
@@ -41,7 +41,7 @@ public class UsersController : BaseController
 		return Ok(await _mediator.Send(command));
 	}
 
-	[HttpDelete("{id: int}")]
+	[HttpDelete("{id}")]
 	public async Task<IActionResult> Delete(int id)
 	{
 		return Ok(await _mediator.Send(new DeleteUserCommand() { Id = id }));

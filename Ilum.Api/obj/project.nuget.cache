@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "uDWEebbd1yc/qKvL3x/dlTotRD4cvhKfKvvIfreJL56OzIQYBHUbkXsWsaFJKma8lMIN9PTE310mL5EHFTtLcA==",
+  "dgSpecHash": "dXVQEWPNE+fiopYWvE8NhBlFrGvRfN3Mn7k02qsQc4PbxPIpVpG4Mea2dJHL4FMCkbquhlJOIkSGLYEsc4gjfg==",
   "success": true,
   "projectFilePath": "/Users/damianruta/Projects/Ilum/Ilum.Api/Ilum.Api.csproj",
   "expectedPackageFiles": [
+    "/Users/damianruta/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/damianruta/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
@@ -11,7 +13,7 @@
     "/Users/damianruta/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.0.0/mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "/Users/damianruta/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/damianruta/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/microsoft.data.sqlclient/5.0.1/microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.0.1/microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/microsoft.entityframeworkcore/7.0.2/microsoft.entityframeworkcore.7.0.2.nupkg.sha512",

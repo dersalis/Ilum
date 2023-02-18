@@ -83,3 +83,10 @@
 /Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/Ilum.Api.pdb
 /Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/Ilum.Api.genruntimeconfig.cache
 /Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/ref/Ilum.Api.dll
+/Users/damianruta/Projects/Ilum/Ilum.Api/bin/Debug/net6.0/AutoMapper.dll
+/Users/damianruta/Projects/Ilum/Ilum.Api/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/staticwebassets/msbuild.Ilum.Api.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/staticwebassets/msbuild.build.Ilum.Api.props
+/Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.Ilum.Api.props
+/Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.Ilum.Api.props
+/Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/staticwebassets.pack.json

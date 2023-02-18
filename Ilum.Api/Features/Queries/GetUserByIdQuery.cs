@@ -1,4 +1,4 @@
-﻿using System;
+﻿using AutoMapper;
 using Ilum.Api.Context;
 using Ilum.Api.Dtos;
 using Ilum.Api.Models;
@@ -14,8 +14,8 @@ public class GetUserByIdQuery : IRequest<GetUserDto>
 
 public class GetUserByIdQueryHandler : BaseHandler, IRequestHandler<GetUserByIdQuery, GetUserDto>
 {
-    public GetUserByIdQueryHandler(IIlumContext ilumContext) : base(ilumContext)
-    { }
+    public GetUserByIdQueryHandler(IIlumContext ilumContext, IMapper mapper) : base(ilumContext, mapper)
+    {}
 
     public async Task<GetUserDto> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
@@ -23,17 +23,19 @@ public class GetUserByIdQueryHandler : BaseHandler, IRequestHandler<GetUserByIdQ
 
         if (user is null) return null;
 
-        GetUserDto userDto = new()
-        {
-            Id = user.Id,
-            FirstName = user.FirstName,
-            LastName = user.LastName,
-            Email = user.Email,
-            Login = user.Login,
-            DepartmentId = user.Department?.Id,
-            DepartmentName = user.Department?.Name,
-        };
+        //GetUserDto userDto = new()
+        //{
+        //    Id = user.Id,
+        //    FirstName = user.FirstName,
+        //    LastName = user.LastName,
+        //    Email = user.Email,
+        //    Login = user.Login,
+        //    DepartmentId = user.Department?.Id,
+        //    DepartmentName = user.Department?.Name,
+        //};
 
-        return userDto;
+        //return userDto;
+
+        return _mapper.Map<GetUserDto>(user);
     }
 }

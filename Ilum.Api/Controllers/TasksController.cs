@@ -24,7 +24,7 @@ public class TasksController : BaseController
         return Ok(await _mediator.Send(command));
     }
 
-    [HttpPut("{id: int}")]
+    [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, [FromBody] UpdateTaskCommand command)
     {
         if (id != command.Id) return BadRequest();
@@ -32,7 +32,7 @@ public class TasksController : BaseController
         return Ok(await _mediator.Send(command));
     }
 
-    [HttpDelete("{id: int}")]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         return Ok(await _mediator.Send(new DeleteTaskCommand() { Id = id }));

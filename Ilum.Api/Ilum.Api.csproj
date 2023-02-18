@@ -16,6 +16,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +32,8 @@
     <None Remove="Shared\" />
     <None Remove="Dtos\" />
     <None Remove="Features\Commands\" />
+    <None Remove="Configurations\" />
+    <None Remove="Configurations\AutoMapperProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -43,5 +47,7 @@
     <Folder Include="Shared\" />
     <Folder Include="Dtos\" />
     <Folder Include="Features\Commands\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Configurations\AutoMapperProfiles\" />
   </ItemGroup>
 </Project>
