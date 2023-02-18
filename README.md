@@ -17,3 +17,7 @@ Packages:
 1. MediatR
 2. MediatR.Extensions.Microsoft.DependencyInjection
 
+## AutoMapper
+Packages:
+1. AutoMapper
+2. AutoMapper.Extensions.Microsoft.DependencyInjection
