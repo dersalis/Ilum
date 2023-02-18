@@ -1,19 +1,10 @@
 ﻿<Properties StartupConfiguration="{C0E6F716-CA30-44E0-8EFE-A367299FCE96}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Features/Commands/CreateUserCommand.cs">
+  <MonoDevelop.Ide.ItemProperties.Ilum.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Features/Commands/DeleteUserCommand.cs">
     <Files>
-      <File FileName="Models/User.cs" Line="6" Column="3" />
-      <File FileName="Models/Department.cs" Line="13" Column="2" />
-      <File FileName="Context/Configurations/UserConfiguration.cs" />
-      <File FileName="Context/Configurations/TaskConfiguration.cs" Line="61" Column="1" />
-      <File FileName="Dtos/GetTaskDto.cs" Line="12" Column="40" />
-      <File FileName="Dtos/GetDepartmentDto.cs" Line="16" Column="1" />
-      <File FileName="Context/IlumContext.cs" Line="40" Column="2" NotebookId="1" />
-      <File FileName="Context/IIlumContext.cs" NotebookId="1" />
-      <File FileName="Features/Queries/GetAllDepartmentsQuery.cs" Line="20" Column="113" NotebookId="1" />
-      <File FileName="Features/Queries/GetAllTaskQuery.cs" Line="8" Column="37" NotebookId="1" />
-      <File FileName="Features/Commands/CreateUserCommand.cs" Line="19" Column="1" NotebookId="1" />
+      <File FileName="Controllers/UsersController.cs" Line="7" Column="32" />
+      <File FileName="Features/Commands/DeleteUserCommand.cs" Line="8" Column="38" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,9 +18,11 @@
               <Node name="Dtos" expanded="True" />
               <Node name="Features" expanded="True">
                 <Node name="Commands" expanded="True">
-                  <Node name="CreateUserCommand.cs" selected="True" />
+                  <Node name="DeleteUserCommand.cs" selected="True" />
                 </Node>
+                <Node name="Queries" expanded="True" />
               </Node>
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Shared" expanded="True" />
             </Node>
@@ -38,9 +31,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Ilum.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/damianruta/Projects/Ilum/Ilum.Api/Features/Commands/UpdateUserCommand.cs" relfile="Features/Commands/UpdateUserCommand.cs" line="35" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>

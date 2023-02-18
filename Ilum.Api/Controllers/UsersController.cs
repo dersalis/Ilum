@@ -1,5 +1,4 @@
-﻿using System;
-using Ilum.Api.Features.Commands;
+﻿using Ilum.Api.Features.Commands;
 using Ilum.Api.Features.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +19,7 @@ public class UsersController : BaseController
 	}
 
 
-	[HttpGet("{id}")]
+	[HttpGet("{id: int}")]
 	public async Task<IActionResult> GetById(int id)
 	{
 		return Ok(await _mediator.Send(new GetUserByIdQuery() { Id = id }));
@@ -34,7 +33,7 @@ public class UsersController : BaseController
 	}
 
 
-	[HttpPut("{id}")]
+	[HttpPut("{id: int}")]
 	public async Task<IActionResult> Update(int id, [FromBody] UpdateUserCommand command)
 	{
 		if (id != command.Id) return BadRequest();
@@ -42,7 +41,7 @@ public class UsersController : BaseController
 		return Ok(await _mediator.Send(command));
 	}
 
-	[HttpDelete("{id}")]
+	[HttpDelete("{id: int}")]
 	public async Task<IActionResult> Delete(int id)
 	{
 		return Ok(await _mediator.Send(new DeleteUserCommand() { Id = id }));
