@@ -1,4 +1,5 @@
-﻿using Ilum.Api.Context;
+﻿using AutoMapper;
+using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
 using MediatR;
@@ -10,20 +11,18 @@ public class CreateTaskCommand : IRequest<Response>
 {
     public string Name { get; set; }
     public string Description { get; set; }
-    //public int Progress { get; set; }
     public string Comment { get; set; }
     public Enums.TaskStatus Status { get; set; }
     public Enums.TaskPriority Priority { get; set; }
     public int ResponsibleUserId { get; set; }
     public DateTime? StartDate { get; set; }
     public DateTime? PlannedFinishDate { get; set; }
-    //public DateTime FinishDate { get; set; }
 }
 
 
 public class CreateTaskCommandHandler : BaseHandler, IRequestHandler<CreateTaskCommand, Response>
 {
-    public CreateTaskCommandHandler(IIlumContext ilumContext) : base(ilumContext)
+    public CreateTaskCommandHandler(IIlumContext ilumContext, IMapper mapper) : base(ilumContext, mapper)
     { }
 
     public async Task<Response> Handle(CreateTaskCommand request, CancellationToken cancellationToken)

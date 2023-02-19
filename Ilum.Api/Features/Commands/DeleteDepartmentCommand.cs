@@ -1,4 +1,5 @@
-﻿using Ilum.Api.Context;
+﻿using AutoMapper;
+using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
 using MediatR;
@@ -14,7 +15,7 @@ public class DeleteDepartmentCommand : IRequest<Response>
 
 public class DeleteDepartmentCommandHandler : BaseHandler, IRequestHandler<DeleteDepartmentCommand, Response>
 {
-    public DeleteDepartmentCommandHandler(IIlumContext ilumContext) : base(ilumContext)
+    public DeleteDepartmentCommandHandler(IIlumContext ilumContext, IMapper mapper) : base(ilumContext, mapper)
     { }
 
     public async Task<Response> Handle(DeleteDepartmentCommand request, CancellationToken cancellationToken)

@@ -1,4 +1,5 @@
-﻿using Ilum.Api.Context;
+﻿using AutoMapper;
+using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
 using MediatR;
@@ -19,8 +20,8 @@ public class UpdateUserCommand : IRequest<Response>
 
 public class UpdateUserCommandHandler : BaseHandler, IRequestHandler<UpdateUserCommand, Response>
 {
-    public UpdateUserCommandHandler(IIlumContext ilumContext) : base(ilumContext)
-    { }
+    public UpdateUserCommandHandler(IIlumContext ilumContext, IMapper mapper) : base(ilumContext, mapper)
+    {}
 
     public async Task<Response> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
     {

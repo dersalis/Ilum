@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using AutoMapper;
 using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
@@ -21,7 +21,7 @@ public class CreateUserCommand : IRequest<Response>
 
 public class CreateUserCommandHandler : BaseHandler, IRequestHandler<CreateUserCommand, Response>
 {
-    public CreateUserCommandHandler(IIlumContext ilumContext) : base(ilumContext)
+    public CreateUserCommandHandler(IIlumContext ilumContext, IMapper mapper) : base(ilumContext, mapper)
     { }
 
     public async Task<Response> Handle(CreateUserCommand request, CancellationToken cancellationToken)

@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
@@ -25,7 +26,7 @@ public class UpdateTaskCommand : IRequest<Response>
 
 public class UpdateTaskCommandHandler : BaseHandler, IRequestHandler<UpdateTaskCommand, Response>
 {
-    public UpdateTaskCommandHandler(IIlumContext ilumContext) : base(ilumContext)
+    public UpdateTaskCommandHandler(IIlumContext ilumContext, IMapper mapper) : base(ilumContext, mapper)
     { }
 
     public async Task<Response> Handle(UpdateTaskCommand request, CancellationToken cancellationToken)

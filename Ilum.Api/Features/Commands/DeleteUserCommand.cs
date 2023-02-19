@@ -1,4 +1,4 @@
-﻿using System;
+﻿using AutoMapper;
 using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
@@ -15,7 +15,7 @@ public class DeleteUserCommand : IRequest<Response>
 
 public class DeleteUserCommandHandler : BaseHandler, IRequestHandler<DeleteUserCommand, Response>
 {
-    public DeleteUserCommandHandler(IIlumContext ilumContext) : base(ilumContext)
+    public DeleteUserCommandHandler(IIlumContext ilumContext, IMapper mapper) : base(ilumContext, mapper)
     { }
 
     public async Task<Response> Handle(DeleteUserCommand request, CancellationToken cancellationToken)

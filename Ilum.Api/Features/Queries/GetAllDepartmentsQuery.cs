@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using Ilum.Api.Context;
 using Ilum.Api.Dtos;
 using Ilum.Api.Models;
@@ -12,23 +13,14 @@ namespace Ilum.Api.Features.Queries
 
     public class GetAllDepartmentsQueryHandler : BaseHandler, IRequestHandler<GetAllDepartmentsQuery, IEnumerable<GetDepartmentDto>>
     {
-        public GetAllDepartmentsQueryHandler(IIlumContext ilumContext) : base(ilumContext)
+        public GetAllDepartmentsQueryHandler(IIlumContext ilumContext, IMapper mapper) : base(ilumContext, mapper)
         { }
 
         public async Task<IEnumerable<GetDepartmentDto>> Handle(GetAllDepartmentsQuery request, CancellationToken cancellationToken)
         {
             IEnumerable<Department> departments = await _ilumContext.Departments.ToListAsync(cancellationToken);
 
-            if (departments is null) return null;
-
-            //return departments.Select(d => new GetDepartmentDto()
-            //{
-            //    Id = d.Id,
-            //    Name = d.Name,
-            //    Description = d.Description,
-            //    //LeaderId = d.Leader.Id,
-            //    //LeaderName = $"{d.Leader.FirstName} {d.Leader.LastName}",
-            //});
+            if (departments == null) return null;
 
             return _mapper.Map<IEnumerable<GetDepartmentDto>>(departments);
         }
