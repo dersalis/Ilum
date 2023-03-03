@@ -21,3 +21,7 @@ Packages:
 Packages:
 1. AutoMapper
 2. AutoMapper.Extensions.Microsoft.DependencyInjection
+
+## BCrypt.Net-Next
+Packages:
+1. BCrypt.Net-Next

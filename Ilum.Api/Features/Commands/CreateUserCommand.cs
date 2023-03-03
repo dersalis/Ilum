@@ -26,8 +26,8 @@ public class CreateUserCommandHandler : BaseHandler, IRequestHandler<CreateUserC
 
     public async Task<Response> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
-        User user = await _ilumContext.Users.Where(u => u.Id == 1).FirstOrDefaultAsync();
-        if (user is null) return Response.Failure("Brak użytkownika.");
+        User createdBy = await _ilumContext.Users.Where(u => u.Id == 1).FirstOrDefaultAsync();
+        if (createdBy is null) return Response.Failure("Brak użytkownika.");
 
         User userByLogin = await _ilumContext.Users.Where(u => u.Login == request.Login || u.Email == request.Email).FirstOrDefaultAsync();
         if (userByLogin is not null) return Response.Failure("Użytkownik o podanym loginie lub e-mail już istnieje.");
@@ -43,12 +43,12 @@ public class CreateUserCommandHandler : BaseHandler, IRequestHandler<CreateUserC
             LastName = request.LastName,
             Email = request.Email,
             Login = request.Login,
-            CurrentPassword = request.NewPassword,
-            LastPassword = request.NewPassword,
+            CurrentPassword = BCrypt.Net.BCrypt.HashPassword(request.NewPassword),
+            LastPassword = string.Empty,
             Department = department,
             IsActive = true,
             CreateDate = DateTime.Now,
-            CreateByUser = user
+            CreateByUser = createdBy
         };
 
         _ilumContext.Users.Add(newUser);
