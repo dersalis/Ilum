@@ -3,6 +3,7 @@ using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ilum.Api.Features.Commands;
@@ -25,13 +26,15 @@ public class UpdateUserCommandHandler : BaseHandler, IRequestHandler<UpdateUserC
 
     public async Task<Response> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
     {
-        User user = await _ilumContext.Users.Where(u => u.Id == 1).FirstOrDefaultAsync();
-        if (user is null) return Response.Failure("Brak użytkownika.");
+        User modifiedBy = await _ilumContext.Users.Where(u => u.Id == 1).FirstOrDefaultAsync();
+        if (modifiedBy is null) return Response.Failure("Brak użytkownika.");
 
         User userToUpdate = await _ilumContext.Users.Where(u => u.Id == request.Id).FirstOrDefaultAsync();
-        if (user is null) return Response.Failure($"Użytkownik o Id = {request.Id} nie istnieje.");
+        if (userToUpdate is null) return Response.Failure($"Użytkownik o Id = {request.Id} nie istnieje.");
 
         if (!request.NewPassword.Equals(request.RepeatedPassword)) return Response.Failure("Podane hasła są różne.");
+
+        if (BCrypt.Net.BCrypt.Verify(request.NewPassword, userToUpdate.LastPassword)) return Response.Failure("To hasło było już użyte - wybierz inne!");
 
         Department department = await _ilumContext.Departments.Where(d => d.IsActive == true && d.Id == request.DepartmentId).FirstOrDefaultAsync();
         if (department is null) return Response.Failure($"Brak działu o Id = {request.DepartmentId}.");
@@ -39,9 +42,9 @@ public class UpdateUserCommandHandler : BaseHandler, IRequestHandler<UpdateUserC
         userToUpdate.FirstName = request.FirstName;
         userToUpdate.LastName = request.LastName;
         userToUpdate.LastPassword = userToUpdate.CurrentPassword;
-        userToUpdate.CurrentPassword = request.NewPassword;
+        userToUpdate.CurrentPassword = BCrypt.Net.BCrypt.HashPassword(request.NewPassword);
         userToUpdate.Department = department;
-        userToUpdate.ModifiedByUser = user;
+        userToUpdate.ModifiedByUser = modifiedBy;
         userToUpdate.ModifiedDate = DateTime.Now;
 
         await _ilumContext.SaveChangesAsync();

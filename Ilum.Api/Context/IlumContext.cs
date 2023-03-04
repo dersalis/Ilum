@@ -9,10 +9,13 @@ namespace Ilum.Api.Context;
 
 public class IlumContext : DbContext, IIlumContext
 {
-    private const string CONNECTION_STRING = @"Data Source=127.0.0.1; Initial Catalog=Ilum; User Id=sa; Password=ulkXZe9PKPEpli22SKR0; TrustServerCertificate=True";
+    //private const string CONNECTION_STRING = @"Data Source=127.0.0.1; Initial Catalog=Ilum; User Id=sa; Password=ulkXZe9PKPEpli22SKR0; TrustServerCertificate=True";
+    protected readonly IConfiguration _configuration;
 
-    public IlumContext(DbContextOptions<IlumContext> options) : base(options)
-    { }
+    public IlumContext(DbContextOptions<IlumContext> options, IConfiguration configuration) : base(options)
+    {
+        _configuration = configuration;
+    }
 
     public DbSet<Models.Task> Tasks { get; set; }
     public DbSet<User> Users { get; set; }
@@ -20,7 +23,7 @@ public class IlumContext : DbContext, IIlumContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(CONNECTION_STRING);
+        optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

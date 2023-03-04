@@ -25,3 +25,11 @@ Packages:
 ## BCrypt.Net-Next
 Packages:
 1. BCrypt.Net-Next
+
+
+## Other stuff
+Packages:
+Microsoft.AspNetCore.Authentication.JwtBearer
+Microsoft.EntityFrameworkCore.Design
+Newtonsoft.Json
+Swashbuckle.AspNetCore

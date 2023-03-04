@@ -2,10 +2,12 @@
 using Ilum.Api.Features.Commands;
 using Ilum.Api.Features.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ilum.Api.Controllers;
 
+[Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class DepartmentsController : BaseController
