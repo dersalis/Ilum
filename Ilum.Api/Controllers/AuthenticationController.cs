@@ -1,4 +1,5 @@
 ﻿using System;
+using Ilum.Api.Features.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,8 +13,14 @@ public class AuthenticationController : BaseController
     { }
 
     [HttpPost("login")]
-    public IActionResult Login()
+    public async Task<IActionResult> Login([FromBody] AuthenticationCommand command)
     {
+        if (command is null || command.Email is null || command.Password is null || command.Email == string.Empty || command.Password == string.Empty)
+            return BadRequest();
+
+        var response = await _mediator.Send(command);
+        if (response is not null) return Ok(response);
+
         return Unauthorized();
     }
 }
