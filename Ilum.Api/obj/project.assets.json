@@ -1345,6 +1345,29 @@
             "rid": "win"
           }
         }
+      },
+      "Ilum.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Ilum.Enums": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ilum.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ilum.Domain.dll": {}
+        }
+      },
+      "Ilum.Enums/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Ilum.Enums.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ilum.Enums.dll": {}
+        }
       }
     }
   },
@@ -4147,6 +4170,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Ilum.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Ilum.Domain/Ilum.Domain.csproj",
+      "msbuildProject": "../Ilum.Domain/Ilum.Domain.csproj"
+    },
+    "Ilum.Enums/1.0.0": {
+      "type": "project",
+      "path": "../Ilum.Enums/Ilum.Enums.csproj",
+      "msbuildProject": "../Ilum.Enums/Ilum.Enums.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4154,6 +4187,8 @@
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "BCrypt.Net-Next >= 4.0.3",
+      "Ilum.Domain >= 1.0.0",
+      "Ilum.Enums >= 1.0.0",
       "MediatR >= 11.1.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.14",
@@ -4188,7 +4223,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/damianruta/Projects/Ilum/Ilum.Domain/Ilum.Domain.csproj": {
+              "projectPath": "/Users/damianruta/Projects/Ilum/Ilum.Domain/Ilum.Domain.csproj"
+            },
+            "/Users/damianruta/Projects/Ilum/Ilum.Enums/Ilum.Enums.csproj": {
+              "projectPath": "/Users/damianruta/Projects/Ilum/Ilum.Enums/Ilum.Enums.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

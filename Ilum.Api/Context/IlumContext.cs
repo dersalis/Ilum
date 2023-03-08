@@ -2,6 +2,7 @@
 using System.Reflection.Emit;
 using Ilum.Api.Context.Configurations;
 using Ilum.Api.Models;
+using Ilum.Domain.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -17,7 +18,7 @@ public class IlumContext : DbContext, IIlumContext
         _configuration = configuration;
     }
 
-    public DbSet<Models.Task> Tasks { get; set; }
+    public DbSet<Domain.Task.Task> Tasks { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Department> Departments { get; set; }
 

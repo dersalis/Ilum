@@ -18,7 +18,7 @@ public class GetAllTaskQueryHandler : BaseHandler, IRequestHandler<GetAllTaskQue
 
     public async Task<IEnumerable<GetTaskDto>> Handle(GetAllTaskQuery request, CancellationToken cancellationToken)
     {
-        IEnumerable<Models.Task> tasks = await _ilumContext.Tasks.ToListAsync(cancellationToken);
+        IEnumerable<Domain.Task.Task> tasks = await _ilumContext.Tasks.ToListAsync(cancellationToken);
 
         if (tasks is null) return null;
 

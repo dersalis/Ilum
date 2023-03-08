@@ -2,6 +2,7 @@
 using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
+using Ilum.Domain.User;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -33,7 +34,7 @@ public class CreateTaskCommandHandler : BaseHandler, IRequestHandler<CreateTaskC
         User responsibleUser = await _ilumContext.Users.Where(u => u.Id == request.ResponsibleUserId).FirstOrDefaultAsync();
         if (responsibleUser is null) return Response.Failure($"Brak użytkownika o id = {request.ResponsibleUserId}.");
 
-        Models.Task newTask = new()
+        Domain.Task.Task newTask = new()
         {
             Name = request.Name,
             Description = request.Description,

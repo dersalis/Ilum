@@ -8,7 +8,7 @@ namespace Ilum.Api.Configurations.AutoMapperProfiles
 	{
 		public TaskProfile()
 		{
-			CreateMap<Models.Task, GetTaskDto>();
+			CreateMap<Domain.Task.Task, GetTaskDto>();
 		}
 	}
 }

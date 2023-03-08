@@ -1,0 +1,12 @@
+/Users/damianruta/Projects/Ilum/Ilum.Enums/bin/Debug/net6.0/Ilum.Enums.deps.json
+/Users/damianruta/Projects/Ilum/Ilum.Enums/bin/Debug/net6.0/Ilum.Enums.dll
+/Users/damianruta/Projects/Ilum/Ilum.Enums/bin/Debug/net6.0/Ilum.Enums.pdb
+/Users/damianruta/Projects/Ilum/Ilum.Enums/obj/Debug/net6.0/Ilum.Enums.csproj.AssemblyReference.cache
+/Users/damianruta/Projects/Ilum/Ilum.Enums/obj/Debug/net6.0/Ilum.Enums.GeneratedMSBuildEditorConfig.editorconfig
+/Users/damianruta/Projects/Ilum/Ilum.Enums/obj/Debug/net6.0/Ilum.Enums.AssemblyInfoInputs.cache
+/Users/damianruta/Projects/Ilum/Ilum.Enums/obj/Debug/net6.0/Ilum.Enums.AssemblyInfo.cs
+/Users/damianruta/Projects/Ilum/Ilum.Enums/obj/Debug/net6.0/Ilum.Enums.csproj.CoreCompileInputs.cache
+/Users/damianruta/Projects/Ilum/Ilum.Enums/obj/Debug/net6.0/Ilum.Enums.dll
+/Users/damianruta/Projects/Ilum/Ilum.Enums/obj/Debug/net6.0/refint/Ilum.Enums.dll
+/Users/damianruta/Projects/Ilum/Ilum.Enums/obj/Debug/net6.0/Ilum.Enums.pdb
+/Users/damianruta/Projects/Ilum/Ilum.Enums/obj/Debug/net6.0/ref/Ilum.Enums.dll

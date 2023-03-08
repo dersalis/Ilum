@@ -1,0 +1,15 @@
+/Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Domain.deps.json
+/Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Domain.dll
+/Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Domain.pdb
+/Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Enums.dll
+/Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Enums.pdb
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.csproj.AssemblyReference.cache
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.AssemblyInfoInputs.cache
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.AssemblyInfo.cs
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.csproj.CoreCompileInputs.cache
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.csproj.CopyComplete
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.dll
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/refint/Ilum.Domain.dll
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.pdb
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/ref/Ilum.Domain.dll

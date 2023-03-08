@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ilum.Api", "Ilum.Api\Ilum.Api.csproj", "{EE66268A-2C37-4B25-BA5C-885789011327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ilum.Domain", "Ilum.Domain\Ilum.Domain.csproj", "{1F786D5A-A31F-4987-8957-989B517F82B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ilum.Enums", "Ilum.Enums\Ilum.Enums.csproj", "{B455D4B3-BEEA-434F-AF90-50F9BE2E992C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE66268A-2C37-4B25-BA5C-885789011327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE66268A-2C37-4B25-BA5C-885789011327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE66268A-2C37-4B25-BA5C-885789011327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE66268A-2C37-4B25-BA5C-885789011327}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F786D5A-A31F-4987-8957-989B517F82B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F786D5A-A31F-4987-8957-989B517F82B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F786D5A-A31F-4987-8957-989B517F82B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F786D5A-A31F-4987-8957-989B517F82B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B455D4B3-BEEA-434F-AF90-50F9BE2E992C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B455D4B3-BEEA-434F-AF90-50F9BE2E992C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B455D4B3-BEEA-434F-AF90-50F9BE2E992C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B455D4B3-BEEA-434F-AF90-50F9BE2E992C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

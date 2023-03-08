@@ -28,7 +28,6 @@
 
   <ItemGroup>
     <None Remove="Models\" />
-    <None Remove="Enums\" />
     <None Remove="Context\" />
     <None Remove="Migrations\" />
     <None Remove="Context\Configurations\" />
@@ -43,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Enums\" />
     <Folder Include="Context\" />
     <Folder Include="Migrations\" />
     <Folder Include="Context\Configurations\" />
@@ -55,5 +53,13 @@
     <Folder Include="Features\Commands\" />
     <Folder Include="Configurations\" />
     <Folder Include="Configurations\AutoMapperProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ilum.Domain\Ilum.Domain.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Ilum.Enums\Ilum.Enums.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -1,12 +1,13 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Ilum.Domain.Task;
 
 namespace Ilum.Api.Context.Configurations;
 
-public class TaskConfiguration : IEntityTypeConfiguration<Models.Task>
+public class TaskConfiguration : IEntityTypeConfiguration<Domain.Task.Task>
 {
-    public void Configure(EntityTypeBuilder<Models.Task> builder)
+    public void Configure(EntityTypeBuilder<Domain.Task.Task> builder)
     {
         builder.Property(p => p.Id)
             .IsRequired();

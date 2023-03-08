@@ -3,6 +3,7 @@ using AutoMapper;
 using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
+using Ilum.Domain.User;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,7 +38,7 @@ public class UpdateTaskCommandHandler : BaseHandler, IRequestHandler<UpdateTaskC
         User responsibleUser = await _ilumContext.Users.Where(u => u.Id == request.ResponsibleUserId).FirstOrDefaultAsync();
         if (responsibleUser is null) return Response.Failure($"Brak użytkownika o id = {request.ResponsibleUserId}.");
 
-        Models.Task taskToUpdate = await _ilumContext.Tasks.Where(t => t.Id == request.Id).FirstOrDefaultAsync();
+        Domain.Task.Task taskToUpdate = await _ilumContext.Tasks.Where(t => t.Id == request.Id).FirstOrDefaultAsync();
         if (taskToUpdate is null) return Response.Failure($"Zadanie o Id = {request.Id} nie istnieje.");
 
         taskToUpdate.Name = request.Name;

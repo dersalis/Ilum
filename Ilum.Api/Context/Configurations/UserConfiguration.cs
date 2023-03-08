@@ -1,5 +1,6 @@
 ﻿using System;
 using Ilum.Api.Models;
+using Ilum.Domain.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

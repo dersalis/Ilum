@@ -2,6 +2,7 @@
 using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
+using Ilum.Domain.User;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,7 +24,7 @@ public class DeleteTaskCommandHandler : BaseHandler, IRequestHandler<DeleteTaskC
         User user = await _ilumContext.Users.Where(u => u.Id == 1).FirstOrDefaultAsync();
         if (user is null) return Response.Failure("Brak użytkownika.");
 
-        Models.Task taskToUpdate = await _ilumContext.Tasks.Where(t => t.Id == request.Id).FirstOrDefaultAsync();
+        Domain.Task.Task taskToUpdate = await _ilumContext.Tasks.Where(t => t.Id == request.Id).FirstOrDefaultAsync();
         if (taskToUpdate is null) return Response.Failure($"Zadanie o Id = {request.Id} nie istnieje.");
 
         taskToUpdate.IsActive = false;

@@ -2,6 +2,7 @@
 using Ilum.Api.Context;
 using Ilum.Api.Dtos;
 using Ilum.Api.Models;
+using Ilum.Domain.User;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
