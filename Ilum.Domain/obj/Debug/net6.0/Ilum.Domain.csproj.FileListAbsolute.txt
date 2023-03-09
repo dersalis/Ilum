@@ -1,4 +1,5 @@
 /Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Domain.deps.json
+/Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Domain.runtimeconfig.json
 /Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Domain.dll
 /Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Domain.pdb
 /Users/damianruta/Projects/Ilum/Ilum.Domain/bin/Debug/net6.0/Ilum.Enums.dll
@@ -12,4 +13,5 @@
 /Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.dll
 /Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/refint/Ilum.Domain.dll
 /Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.pdb
+/Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/Ilum.Domain.genruntimeconfig.cache
 /Users/damianruta/Projects/Ilum/Ilum.Domain/obj/Debug/net6.0/ref/Ilum.Domain.dll

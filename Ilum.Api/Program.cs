@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Text;
 using Ilum.Api.Configurations;
-using Ilum.Api.Context;
+using Ilum.Domain.Context;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;

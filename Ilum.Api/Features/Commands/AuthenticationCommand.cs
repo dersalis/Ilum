@@ -2,8 +2,9 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Ilum.Api.Context;
 using Ilum.Api.Models;
+using Ilum.Domain.Context;
+using Ilum.Domain.User;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;

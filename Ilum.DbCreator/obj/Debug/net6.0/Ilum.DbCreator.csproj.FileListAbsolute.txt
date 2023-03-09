@@ -1,0 +1,12 @@
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/bin/Debug/net6.0/Ilum.DbCreator.deps.json
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/bin/Debug/net6.0/Ilum.DbCreator.dll
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/bin/Debug/net6.0/Ilum.DbCreator.pdb
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/obj/Debug/net6.0/Ilum.DbCreator.csproj.AssemblyReference.cache
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/obj/Debug/net6.0/Ilum.DbCreator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/obj/Debug/net6.0/Ilum.DbCreator.AssemblyInfoInputs.cache
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/obj/Debug/net6.0/Ilum.DbCreator.AssemblyInfo.cs
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/obj/Debug/net6.0/Ilum.DbCreator.csproj.CoreCompileInputs.cache
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/obj/Debug/net6.0/Ilum.DbCreator.dll
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/obj/Debug/net6.0/refint/Ilum.DbCreator.dll
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/obj/Debug/net6.0/Ilum.DbCreator.pdb
+/Users/damianruta/Projects/Ilum/Ilum.DbCreator/obj/Debug/net6.0/ref/Ilum.DbCreator.dll

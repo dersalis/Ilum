@@ -1,6 +1,4 @@
 ﻿<Properties StartupConfiguration="{EE66268A-2C37-4B25-BA5C-885789011327}|Default">
-  <MonoDevelop.Ide.ItemProperties.Ilum.Domain FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.Ilum.Api PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Ilum.Enums FirstBuild="True" />
 </Properties>

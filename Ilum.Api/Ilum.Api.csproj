@@ -28,9 +28,6 @@
 
   <ItemGroup>
     <None Remove="Models\" />
-    <None Remove="Context\" />
-    <None Remove="Migrations\" />
-    <None Remove="Context\Configurations\" />
     <None Remove="Extensions\" />
     <None Remove="Features\" />
     <None Remove="Features\Queries\" />
@@ -42,9 +39,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Context\" />
-    <Folder Include="Migrations\" />
-    <Folder Include="Context\Configurations\" />
     <Folder Include="Extensions\" />
     <Folder Include="Features\" />
     <Folder Include="Features\Queries\" />

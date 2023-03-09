@@ -1,5 +1,5 @@
 ﻿using System;
-using Ilum.Api.Context;
+using Ilum.Domain.Context;
 
 namespace Ilum.Api.Configurations;
 

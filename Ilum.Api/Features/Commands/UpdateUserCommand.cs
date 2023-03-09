@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using Ilum.Api.Context;
 using Ilum.Api.Models;
 using Ilum.Api.Shared;
+using Ilum.Domain.Context;
 using Ilum.Domain.User;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
