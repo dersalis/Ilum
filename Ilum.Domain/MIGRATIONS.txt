@@ -1,0 +1,3 @@
+﻿W tym projekcie:
+
+dotnet ef --startup-project ../Ilum.Api/ migrations add MigrationName

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ilum.Domain.Migrations
 {
     [DbContext(typeof(IlumContext))]
-    [Migration("20230309205607_test")]
-    partial class test
+    [Migration("20230312131648_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -41,6 +41,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User.User>
         builder.Property(p => p.LastPassword)
             .HasMaxLength(64);
 
+        builder.Property(p => p.IsManager)
+            .HasDefaultValue(false);
+
         builder.HasOne(p => p.Department)
             .WithMany()
             .HasForeignKey(p => p.DepartmentId)

@@ -23,7 +23,8 @@ public class IlumContext : DbContext, IIlumContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"), options => options.MigrationsAssembly("Ilum.Domain")); // Migracja do innego projektu
+        optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"));
+        //optionsBuilder.UseSqlServer(_configuration.GetConnectionString("DefaultConnection"), options => options.MigrationsAssembly("Ilum.Api")); // Migracja do innego projektu
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

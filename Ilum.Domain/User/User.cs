@@ -11,6 +11,7 @@ public class User : ModelBase
     public string Login { get; set; }
     public string CurrentPassword { get; set; }
     public string LastPassword { get; set; }
+    public bool IsManager { get; set; }
 
     public int? DepartmentId { get; set; }
     public Department? Department { get; set; }
