@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/damianruta/Projects/Ilum/Ilum.Api/Ilum.Api.csproj": {}
+    "/Users/damianruta/Projects/Ilum/ilum.api/Ilum.Api.csproj": {}
   },
   "projects": {
-    "/Users/damianruta/Projects/Ilum/Ilum.Api/Ilum.Api.csproj": {
+    "/Users/damianruta/Projects/Ilum/ilum.api/Ilum.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/damianruta/Projects/Ilum/Ilum.Api/Ilum.Api.csproj",
+        "projectUniqueName": "/Users/damianruta/Projects/Ilum/ilum.api/Ilum.Api.csproj",
         "projectName": "Ilum.Api",
-        "projectPath": "/Users/damianruta/Projects/Ilum/Ilum.Api/Ilum.Api.csproj",
+        "projectPath": "/Users/damianruta/Projects/Ilum/ilum.api/Ilum.Api.csproj",
         "packagesPath": "/Users/damianruta/.nuget/packages/",
-        "outputPath": "/Users/damianruta/Projects/Ilum/Ilum.Api/obj/",
+        "outputPath": "/Users/damianruta/Projects/Ilum/ilum.api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/damianruta/.nuget/NuGet/NuGet.Config"
@@ -155,6 +155,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.3, )"

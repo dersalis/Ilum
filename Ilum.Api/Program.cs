@@ -38,4 +38,5 @@ app.UseCors(x => x
         .AllowAnyOrigin()
         .AllowAnyMethod()
         .AllowAnyHeader());
+app.MigrateDatabase(); // Automatyczna migracja DB
 app.Run();

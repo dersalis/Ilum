@@ -44,6 +44,9 @@ public class UserConfiguration : IEntityTypeConfiguration<User.User>
         builder.Property(p => p.IsManager)
             .HasDefaultValue(false);
 
+        builder.Property(p => p.IsAdmin)
+            .HasDefaultValue(false);
+
         builder.HasOne(p => p.Department)
             .WithMany()
             .HasForeignKey(p => p.DepartmentId)

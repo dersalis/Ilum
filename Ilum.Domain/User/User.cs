@@ -10,7 +10,8 @@ public class User : ModelBase
     public string Email { get; set; }
     public string Login { get; set; }
     public string CurrentPassword { get; set; }
-    public string LastPassword { get; set; }
+    public string? LastPassword { get; set; }
+    public bool IsAdmin { get; set; }
     public bool IsManager { get; set; }
 
     public int? DepartmentId { get; set; }

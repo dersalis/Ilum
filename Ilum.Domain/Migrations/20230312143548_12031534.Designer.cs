@@ -4,6 +4,7 @@ using Ilum.Domain.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ilum.Domain.Migrations
 {
     [DbContext(typeof(IlumContext))]
-    partial class IlumContextModelSnapshot : ModelSnapshot
+    [Migration("20230312143548_12031534")]
+    partial class _12031534
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -140,7 +143,7 @@ namespace Ilum.Domain.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 3, 12, 16, 13, 56, 210, DateTimeKind.Local).AddTicks(7870),
+                            CreateDate = new DateTime(2023, 3, 12, 15, 35, 48, 19, DateTimeKind.Local).AddTicks(9700),
                             Description = "IT Department",
                             IsActive = true,
                             Name = "IT"
@@ -181,11 +184,6 @@ namespace Ilum.Domain.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
-
-                    b.Property<bool>("IsAdmin")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
 
                     b.Property<bool>("IsManager")
                         .ValueGeneratedOnAdd()
@@ -228,13 +226,12 @@ namespace Ilum.Domain.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2023, 3, 12, 16, 13, 56, 377, DateTimeKind.Local).AddTicks(1610),
-                            CurrentPassword = "$2a$11$6YHiO/5CqHz97Dee7U/ZguQ9r/nhIbe8ujB2os/m1ZOBIANSYfOJe",
+                            CreateDate = new DateTime(2023, 3, 12, 15, 35, 48, 185, DateTimeKind.Local).AddTicks(3410),
+                            CurrentPassword = "$2a$11$SjiWy2qGsoGsy4Bzav2YBexlyN8VdNJcMwlByH8PmCkphBrK/JoYS",
                             DepartmentId = 1,
                             Email = "admin@wp.pl",
                             FirstName = "Administrator",
                             IsActive = true,
-                            IsAdmin = false,
                             IsManager = false,
                             LastName = "Administrator",
                             Login = "admin"

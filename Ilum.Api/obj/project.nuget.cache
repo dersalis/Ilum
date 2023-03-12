@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r82u+NXf+fLtfUJQXQwf4qOcacdLdCDq7HvNNbfwnrjmwt0PP44ipReloianfrYkXc2WLHbANGoYLnkxYH5a0g==",
+  "dgSpecHash": "VSLBizt21QVD/0cz4i0N+zYDwZ0nrERq5jrgQwGUEBQ4gAtsjn6u6YBH7K6Cw55X38bNmkB5Qe3AHRHG9QuqHg==",
   "success": true,
-  "projectFilePath": "/Users/damianruta/Projects/Ilum/Ilum.Api/Ilum.Api.csproj",
+  "projectFilePath": "/Users/damianruta/Projects/Ilum/ilum.api/Ilum.Api.csproj",
   "expectedPackageFiles": [
     "/Users/damianruta/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

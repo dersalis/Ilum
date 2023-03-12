@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Reflection.Emit;
+using Azure.Core;
+using Ilum.Domain.Context.Configurations;
 using Ilum.Domain.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -31,10 +33,7 @@ public class IlumContext : DbContext, IIlumContext
     {
         modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
 
-        //base.OnModelCreating(modelBuilder);
-
-
-        //modelBuilder.ApplyConfigurationsFromAssembly(typeof(UserConfiguration).Assembly);
+        modelBuilder.SeedDefaultData();
     }
 
     public async Task<int> SaveChangesAsync()

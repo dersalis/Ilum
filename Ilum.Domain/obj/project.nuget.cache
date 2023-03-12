@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OJuE3vG1gm1wvdZ2zUrktC5PJst6Fre64Mzf8gjBOMM5nq92ZraOOHBbibNZgGSgNYJETp02uZ9HwB4UKYxBZQ==",
+  "dgSpecHash": "4tbFA8TJI2uvCPyW2t5sq11HROGCrQEAF7DnwNjuMuBWGQkgJStC6+ZKvoLFVmGVmu43VohLqv+dkzyQek8VSg==",
   "success": true,
   "projectFilePath": "/Users/damianruta/Projects/Ilum/Ilum.Domain/Ilum.Domain.csproj",
   "expectedPackageFiles": [
     "/Users/damianruta/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
+    "/Users/damianruta/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/damianruta/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

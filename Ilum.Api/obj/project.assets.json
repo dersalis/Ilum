@@ -1350,6 +1350,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
           "Ilum.Enums": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.3",

@@ -1,0 +1,8 @@
+﻿# Migracja w projekcie Ilum.Domain:
+
+dotnet ef --startup-project ../Ilum.Api/ migrations add MigrationName
+
+
+# Aktualizacja bazy w projekcie Ilum.Api:
+
+dotnet database update
