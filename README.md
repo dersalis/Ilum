@@ -26,6 +26,9 @@ Packages:
 Packages:
 1. BCrypt.Net-Next
 
+## FluentValidation
+Packages:
+1. FluentValidation.AspNetCore
 
 ## Other stuff
 Packages:
