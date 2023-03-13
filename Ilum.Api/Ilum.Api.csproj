@@ -24,6 +24,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +37,7 @@
     <None Remove="Features\Commands\" />
     <None Remove="Configurations\" />
     <None Remove="Configurations\AutoMapperProfiles\" />
+    <None Remove="Features\Validators\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -47,6 +49,7 @@
     <Folder Include="Features\Commands\" />
     <Folder Include="Configurations\" />
     <Folder Include="Configurations\AutoMapperProfiles\" />
+    <Folder Include="Features\Validators\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ilum.Domain\Ilum.Domain.csproj">

@@ -6,7 +6,10 @@ using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using FluentValidation;
 using ConfigurationManager = Ilum.Api.Configurations.ConfigurationManager;
+using FluentValidation.AspNetCore;
+using Ilum.Api.Features.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +20,7 @@ builder.Services.AddMediatRServices();
 builder.Services.AddAutoMapperServices();
 builder.Services.AddSwaggerServices();
 builder.Services.AddAutoMapperServices();
+builder.Services.AddFluentValidatorService();
 builder.Services.AddScoped<IIlumContext>(provider => provider.GetService<IlumContext>());
 
 var app = builder.Build();

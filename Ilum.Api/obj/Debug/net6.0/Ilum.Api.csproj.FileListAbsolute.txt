@@ -96,3 +96,6 @@
 /Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/Ilum.Api.pdb
 /Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/Ilum.Api.genruntimeconfig.cache
 /Users/damianruta/Projects/Ilum/Ilum.Api/obj/Debug/net6.0/ref/Ilum.Api.dll
+/Users/damianruta/Projects/Ilum/Ilum.Api/bin/Debug/net6.0/FluentValidation.dll
+/Users/damianruta/Projects/Ilum/Ilum.Api/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
+/Users/damianruta/Projects/Ilum/Ilum.Api/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
